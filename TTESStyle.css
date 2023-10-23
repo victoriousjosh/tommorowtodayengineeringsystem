@@ -1,0 +1,1684 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins',sans-serif;
+}
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color:#323946;
+  --text-color:#fff;
+  --main-color:#0ef;
+  --gold-color:gold;
+}
+
+html{
+  background: white;
+  color: var(--text-color)
+}
+#media{
+  display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 2rem;
+height: 2rem;
+background: transparent;
+border: 2px solid var(--main-color);
+border-radius: 50%;
+font-size: 1.3rem;
+color: var(--main-color);
+margin: 3px 1.5px 3px 0;
+transition: 5s ease;
+margin: 11px;
+transition: 5s ease;
+}
+#media:hover{
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1px var(--main-color);
+}
+
+.btn{
+  display: inline-block;
+  padding: 0.5rem 1.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 0.5rem var(--main-color);
+  font-size: 1rem;
+  color: var(--second-bg-color);
+  letter-spacing: 1.6px;
+  font-weight: 700;
+  transition: 5s ease;
+}
+nav{
+  background: var(--second-bg-color);
+  min-height: 3rem;
+  width: 100%;
+}
+nav .logo{
+  font-size: 3rem;
+  color: var(--gold-color);
+  font-weight:bold;
+  padding: 0 100px;
+  line-height: 80px;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+}
+nav li{
+  display: inline-block;
+  padding: 0 8px;
+  line-height: 80px;
+}
+nav a{
+  text-transform: lowercase;
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 300;
+}
+nav a:hover, nav a.active{
+  color: var(--main-color);
+}
+.checkbtn{
+  color: white;
+  font-size: 2.5rem;
+  line-height: 80px;
+  float: right;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 1048px){
+  nav .logo{
+    font-size: 32px;
+    padding-left: 60px;
+    color: cyan;
+  }
+
+  nav ul{
+    margin-right: 20px;
+
+  }
+  nav a{
+    font-size: 17px;
+  }
+}
+@media (max-width: 768px){
+  nav .checkbtn{
+   display: block;
+  }
+  nav ul{
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   background: var(--bg-color);
+   top: 80px;
+   left: -100%;
+   text-align: center;
+   transition: all .5s ease;
+ }
+ nav li{
+  display: block;
+  margin: 50px 0;
+  line-height: 2rem;
+}
+nav a{
+  font-size: 20px;
+}
+#check:checked ~ ul{
+  left: 0;
+}
+}
+/*-------Navbar style starts------------
+nav{
+  min-height: 3rem;
+  background: var(--second-bg-color);
+  width: 100%;
+}
+nav .logo{
+  font-size: 3rem;
+  color: var(--gold-color);
+  font-weight:bold;
+  padding: 0 100px;
+  line-height: 80px;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+}
+nav li{
+  display: inline-block;
+  padding: 0 8px;
+  line-height: 80px;
+}
+nav a{
+  text-transform: lowercase;
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 300;
+}
+nav a:hover, nav a.active{
+  color: var(--main-color);
+}
+nav #conn{
+  color: white;
+  font-size: 2.5rem;
+  line-height: 80px;
+  float: right;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 1048px){
+  nav .logo{
+    font-size: 32px;
+    padding-left: 60px;
+    color: cyan;
+  }
+
+  nav ul{
+    margin-right: 20px;
+
+  }
+  nav a{
+    font-size: 17px;
+  }
+}
+@media (max-width: 768px){
+ nav #conn{
+  display: block;
+ }
+ nav ul{
+  position: fixed;
+  width: 100%;
+  height: 1OOvh;
+  background: var(--bg-color);
+  top: 80px;
+  left: -100%;
+  text-align: center;
+  transition: all .5s ease;
+}
+nav li{
+  display: block;
+  margin: 50px 0;
+  line-height: 30px;
+}
+nav a{
+  font-size: 20px;
+}
+#conn:checked  ul{
+  left: 0;
+}
+}
+------Navbar style ends--------------
+--menu icon design-
+#HMIcon{
+  font-size: 6rem;
+  color: white;
+  display: none;
+}
+
+@media(max-width: 768px){
+  #HMIcon{
+    display: block;
+  }
+  .headerLinks {
+    position: absolute;
+    top: 89px;
+    left: 0px;
+    width: 100%;
+    padding: 0;
+    background: var(--bg-color);
+    border-top:.1rem solid rgba(0,0,0,.2) ;
+    box-shadow: 0.5rem 1rem rgba(0,0,0.2);
+    display: none;
+     }
+     .headerLinks  .active{
+      display: block;
+     }
+  .headerLinks  a{
+    display: block;
+    
+  }
+}
+  ---menu icon design---
+.headerContent{
+  padding: 0;
+  position:fixed;
+  top: 0;
+  left:0;
+  right:0;
+  z-index:10000;
+ display: flex;
+ justify-content: space-between;
+   box-shadow: var(--box-shadow);
+   align-self: center;
+  min-height: 3rem; 
+   background: var(--second-bg-color);
+  
+}
+
+.headerContent .headerLogo{
+   height: 6rem;
+ width: 13rem;
+ border: 3px solid var(--main-color);
+}
+.headerContent .headerLogo img{
+ width: 100%;
+ height: 100%;
+}
+
+.headerContent .headerLinks{
+padding-top: 2rem;
+
+}
+.headerLinks a{
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+}
+.headerLinks a:hover,.headerLinks a.active{
+  color: var(--main-color);
+} */
+
+.homePage{
+  background:var(--second-bg-color)
+}
+.homePage .homeContainer{
+  text-align: center;
+    padding: 1.2rem;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 26rem;
+
+}
+.homePage .homeContainer .homeContent{
+display: inline-block;
+padding: 1rem;
+margin-top: 3rem;
+padding-bottom: 2.5rem;
+}
+.homePage .homeContainer .homeContent .homePageLink{
+  padding-top: 1rem;
+}
+.homePage .homeContainer .homeLinks{
+
+ }
+
+.homePage .homeContainer .homeContent h3{
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--main-color);
+  text-transform: uppercase;
+  text-shadow: 2px 2px gold;
+
+}
+.homePage .homeContainer .homeContent p{
+ 
+ text-align: center;
+ justify-content: center;
+ align-items: center;
+ font-size: 1.5rem ;
+ font-weight: 600;
+ line-height: 2rem;
+ font-family: 'Times New Roman', Times, serif;
+ color: var(white);
+}
+
+/*------------------------------------SPAN--------------------------------------------*/
+.spn{
+  color: #0ef;
+}
+.gold{
+  color: var(--gold-color);
+}
+/*--------------------------------------SPAN--------------------------------------------*/
+/*-------------------------- homeAbout Style Css Starts--------------------------*/
+.homeAbout{
+  background: var(--second-bg-color);
+}
+.homeAbout .aboutHeading{
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ padding-top: 4.5rem;
+ font-size: 3rem;
+ font-weight: 600;
+
+}
+.homeAbout .aboutContainer{
+  display: flex;
+  gap: 3rem;
+  padding-top: 3rem;
+  }
+  .homeAbout .aboutContainer .aboutImage{
+    height:34rem ;
+    width: 190rem;
+    overflow: hidden;
+  }
+  .homeAbout .aboutContainer .aboutImage img{
+    height: 100%;
+    width: 100%;
+  }
+  .homeAbout .aboutContainer .aboutContent{
+    display: block;
+    gap: 2rem;
+  }
+  .homeAbout .aboutContainer .aboutContent h3{
+    text-align: center;
+    font-size:2rem ;
+    font-weight: 600;
+    
+  }
+    .homeAbout .aboutContainer .aboutContent p{
+  font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  strong{
+    color: gold;
+    font-style: italic;
+  }
+  .homeAbout .aboutContainer .aboutContent .aboutLink{
+padding-top: 1.5rem;
+  }
+ /*-------------------------- homeAbout Style Css Ends----------------------------*/
+
+ /*-------------------------- AboutPage Style Css Starts----------------------------*/
+ .aboutPage{
+padding: 0;
+ }
+ .aboutPage .aboutPageContainer{
+  background: url(images/disphoto.jpg);
+  min-height: 27rem;
+  background-size: cover !important;
+  background-position: center !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
+ .aboutPage .aboutPageContainer h3{
+ padding-top: 8rem;
+ font-size: 3.8rem;
+ font-weight: 600;
+ }
+ .aboutPage .aboutPageContainer .aboutPageMidea {
+padding-top: 2rem;
+ }
+ /*--aboutDataSection--*/
+ .aboutData{
+  background-color: var(--bg-color);
+
+ }
+ .aboutData .aboutDataHeading{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 4rem;
+  text-transform: uppercase;
+ }
+ .aboutData .aboutDataContainer{
+ display: block;
+ gap: 2rem;
+ justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+.aboutData .aboutDataContainer .aboutDataContent{
+ border: 1.8px solid var(--main-color); 
+ display: block;
+ width: 100%;
+ padding: 1.2rem;
+ 
+}
+.aboutData .aboutDataContainer .aboutDataContent h3{
+  font-size: 1.4rem;
+  color: gold;
+  font-weight: 600;
+  padding-top: 1.4rem;
+  padding-left: 2rem;
+  text-align: center;
+}
+.aboutData .aboutDataContainer .aboutDataContent p{
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 2rem;
+  padding-top: 0.9rem;
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
+  
+}
+.aboutData .aboutDataContainer .aboutDataContent h2{
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--main-color);
+}
+
+ /*-------------------------- AboutPage Style Css Ends----------------------------*/
+
+/*---------------------------- products Page Style Css Starts----------------------------*/
+/* HEADER SECTION*/
+.productPHeading{
+  background-color: var(--bg-color);
+  padding: 0;
+}
+.productPHeading .productPHContainer{
+  display: block;
+  min-height: 26rem;
+  background-size: cover !important;
+  background-position: center !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.productPHeading .productPHContainer .PHBox{
+  padding-top: 10rem;
+}
+.productPHeading .productPHContainer .productPContent h3{
+  color: white;
+  font-size: 3rem;
+}
+.productPHeading .productPHContainer .PHBox  .prodLinks{
+  padding-top: 1.5rem;
+}
+/* PAGE DATA SECTION*/
+.productsData{
+  background: var(--bg-color);
+}
+.productsData .PPHeading{
+  font-size: 3rem;
+  text-align: center;
+  padding: 2.5rem;
+  font-weight: 600;
+}
+.productsData .PPParagraph{
+  font-size: 1.3rem;
+  line-height: 2rem;
+  text-align: center;
+  padding: 0.5rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+.productsData .PDContainer{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2.5rem;
+  padding: 3rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.productsData .PDContainer .PContent{
+  background-color: var(--second-bg-color);
+  border: 2px solid var(--main-color);
+   flex: 1 1 30px;
+  background: var(--second-bg-color);
+  padding: 2px 2px 4px;
+  border-radius: 55px;
+  text-align: center;
+ width: 85%;
+ min-height: 13rem ;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+transition: 5s ease;
+}
+.productsData .PDContainer .PContent:hover{
+  cursor: pointer;
+  background-color: black;
+  border: 3px solid var(--gold-color);
+  transform: scale(1.02);
+ 
+}
+.productsData .PDContainer .PContent h3{
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  color: var(--gold-color);
+  font-weight: 600;
+  text-align: center;
+}
+.productsData .PDContainer .PContent p{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-top: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+/*PRODUCTS WATER AND INDURSTRIAL PUMPS PHOTO DESIGN*/
+.WAIDivision{
+  background: var(--second-bg-color);
+}
+.WAIDivision .WAIHeading{
+  text-align: center;
+  padding: 3rem;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.WAIDivision .WAIContainer{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+.WAIDivision .WAIContainer .WAIBox{
+  height: 22rem;
+  width: 20rem;
+  display: block;
+  border: 2px solid var(--main-color);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.WAIDivision .WAIContainer .WAIBox .WAIImage{
+  width: 19.6rem;
+  height: 14rem;
+}
+.WAIDivision .WAIContainer .WAIBox .WAIImage img{
+  width: 100%;
+  height: 100%;
+}
+.WAIDivision .WAIContainer .WAIBox .WAIContent{
+  padding: 2rem;
+  display: block;
+}
+.WAIDivision .WAIContainer .WAIBox .WAIContent h3{
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--gold-color);
+  font-weight: 600;
+}
+.WAIDivision .WAIContainer .WAIBox .WAIContent .WAIlink{
+  padding-top: 0.7rem;
+}
+/*PRODUCTS PAGE POWER DIVISION STYLE STARTS*/
+.PGDivision{
+  background-color: var(--bg-color);
+}
+.PGDivision .PGHeading{
+text-align: center;
+font-size: 3rem;
+padding: 4rem;
+text-transform: uppercase;
+}
+.PGDivision .PGContainer{
+  gap: 4rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+ 
+}
+.PGDivision .PGContainer .PGBox{
+  border: 3px solid var(--main-color);
+  display: block;
+  height: 22rem;
+  width: 20rem;
+}
+.PGDivision .PGContainer .PGBox .PGImage{
+  width:19.6rem ;
+  height:14rem ;
+} 
+.PGDivision .PGContainer .PGBox .PGImage img{
+  width: 100%;
+  height: 100%;
+}
+.PGDivision .PGContainer .PGBox .PGContent{
+  padding-top: 1rem;
+  display: block;
+  gap: 2rem;
+}
+.PGDivision .PGContainer .PGBox .PGContent h3{
+color: var(--gold-color);
+font-size: 1.2rem;
+font-weight: 600;
+font-family: 'Times New Roman', Times, serif;
+}
+.PGDivision .PGContainer .PGBox .PGContent .PGLink{
+  padding-top: 1rem;
+}
+/*PRODUCTS PAGE IRRIGATION DIVISION STYLE STARTS*/
+.IDivision{
+  background: var(--second-bg-color);
+  display: block;
+}
+.IDivision .IHeading{
+  font-size: 3rem;
+  text-align: center;
+  padding: 4rem;
+  text-transform: uppercase;
+}
+.IDivision .IContainer{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 4rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.IDivision .IContainer .IBox{
+  border: 3px solid var(--main-color);
+  height: 22rem;
+  width: 20rem;
+  display: block;
+}
+.IDivision .IContainer .IBox .IImage{
+  height: 14rem;
+  width: 19.6rem;
+}
+.IDivision .IContainer .IBox .IImage img{
+  width: 100%;
+  width: 100%;
+}
+.IDivision .IContainer .IBox .IContent{
+  display: block;
+  padding: 1rem;
+}
+.IDivision .IContainer .IBox .IContent h3{
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 1rem;
+  color: var(--gold-color);
+}
+.IDivision .IContainer .IBox .IContent .ILink{
+  padding-top:1rem ;
+  text-align: center;
+}
+.IDivision .DBox{
+display: block;
+padding: 2rem;
+text-align: center;
+padding-left: 13rem;
+
+}
+.IDivision .DBox .DHeading{
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+ text-align: center;
+ padding-right:14rem ;
+}
+.IDivision .DBox .DImage{
+  height: 23rem;
+  width: 50rem;
+  
+  
+}
+
+.IDivision .DBox .DImage img{
+  width: 100%;
+  height: 100%;
+}
+.IDivision .DBox .DContent{
+padding-bottom: 1.2rem;
+text-align: center;
+}
+.IDivision .DBox .DContent h3{
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--main-color);
+}
+/*-----PRODUCTS PAGE FARM POWER AND MACHINERY DIVISION STYLE START-----*/
+.PAMDivision{
+background: var(--bg-color);
+}
+.PAMDivision .PAMHeading{
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.PAMDivision .PAMContainer{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 4rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 3rem;
+}
+.PAMDivision .PAMContainer .PAMBox{
+  height: 23rem;
+  width: 35rem;
+  border: 3px solid var(--main-color);
+}
+.PAMDivision .PAMContainer .PAMBox .PAMImage{
+  height: 17rem;
+  width: 34.7rem;
+}
+.PAMDivision .PAMContainer .PAMBox .PAMImage img{
+  width: 100%;
+  height: 100%;
+}
+.PAMDivision .PAMContainer .PAMBox .PAMContent{
+  padding-top: 0.7rem;
+}
+.PAMDivision .PAMContainer .PAMBox .PAMContent h3{
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--gold-color);
+}
+.PAMDivision .PAMContainer .PAMBox .PAMContent .PAMLink{
+  padding-top: 0.5rem;
+}
+
+
+
+/*----------------------------- products Page Style Css Ends-----------------------------*/
+
+
+/*----------------------------- Service Page Style Css Starts-----------------------------*/
+.serviceHeader{
+  padding: 0;
+}
+.serviceHeader .SHContainer{
+  background: url(images/disphoto.jpg);
+  min-height: 30rem;
+  background-size: cover !important;
+  background-position: center !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  }
+  .serviceHeader .SHContainer .SHContent{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-top: 13rem;
+  }
+  .serviceHeader .SHContainer .SHContent .SHHeading{
+    font-size: 3.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  } 
+  .serviceHeader .SHContainer .SHContent .SHLinks{
+    padding-top: 1rem;
+  }
+  /*DATA SECTION  STYLE STARTS*/
+  .DSection{
+    background: var(--second-bg-color);
+  }
+  .DSection .DContent{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  .DSection .DContent .DHeading{
+ font-size: 3rem;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+ padding: 1.5rem;
+  }
+  .DSection .DContent p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    
+    }
+  .DSection .DContent p .DList{
+    color: var(--gold-color);
+  }
+  /* AIR COMPRESSSOR SERVICE SECTION STYLE*/
+  .CSSection{
+    background: var(--bg-color);
+    display: block;
+    border: 3px solid var(--main-color);
+  }
+  .CSSection .CSHeading{
+     text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 1rem;
+  }
+  .CSSection .CSParagraph{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+    .CSSection  .CSParagraph p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+  .CSSection .CSContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 6.5rem;
+  }
+ .CSSection .CSContainer .imageBox {
+  border: 3px solid var(--main-color);
+  height: 20rem;
+  width: 27rem;
+ }
+ .CSSection .CSContainer .imageBox .BImage{
+  width: 26.6rem;
+  height: 16rem;
+ }
+ .CSSection .CSContainer .imageBox .BImage img{
+  width: 100%;
+  height: 100%;
+ }
+ .CSSection .CSContainer .imageBox h3{
+  padding-top: 1rem;
+  font-size: 1rem;
+  color: var(--gold-color);
+ }
+ .CSSection .CSLink{
+  text-align: center;
+  padding: 1.5rem;
+ }
+ 
+  /*-----IRRIGATION SERVICE STYLE--------*/
+  .ISSection{
+    background: var(--second-bg-color);
+  }
+.ISSection .ISHeading{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 3rem;
+}
+.ISSection .ISContainer{
+  display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 3px solid var(--main-color);
+}
+.ISSection .ISContainer .ISParagraph{
+  padding: 1rem;
+}
+.ISSection .ISContainer .ISParagraph p{
+  font-size: 1.3rem;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 2rem;
+}
+.ISSection .ISContainer .ISImage{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 4rem;
+}
+.ISSection .ISContainer .ISImage .ISIBox{
+  border: 3px solid var(--main-color);
+  height: 20rem;
+  width: 22rem;
+}
+.ISSection .ISContainer .ISImage .ISIBox .boxImage{
+  width:21.6rem ;
+  height: 15.5rem;
+}
+.ISSection .ISContainer .ISImage .ISIBox .boxImage img{
+  width: 100%;
+  height: 100%;
+}
+.ISSection .ISContainer .ISImage .ISIBox h2{
+  padding-top: 0.4rem;
+  font-size: 1rem;
+  color: var(--gold-color);
+  font-weight: 600;
+}
+.ISSection .ISContainer .ISImage .ISIBox .orderLink{
+  margin-bottom: 1.2rem;
+}
+.ISSection .ISContainer .ISLink{
+  padding: 2rem;
+}
+/*FARM POWER AND MACHINERY SECTION STYLE*/
+.PAMSSection{
+  background: var(--bg-color);
+}
+.PAMSSection .PAMSHeading{
+  padding: 4rem;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+.PAMSSection .PAMSContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+}
+.PAMSSection .PAMSContainer .PAMSImage{
+  border: 3px solid var(--main-color);
+  height: 22rem;
+  width: 80rem;
+}
+.PAMSSection .PAMSContainer .PAMSImage img{
+  width: 100%;
+  height: 100%;
+}
+.PAMSSection .PAMSContainer .PAMSContent{
+  margin-bottom: 2.5rem;
+  display: block;
+}
+.PAMSSection .PAMSContainer .PAMSContent h3{
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  animation: colors 3s 1000 0.2s;
+}
+@keyframes colors{
+  0%{ color: var(--main-color);}
+  50%{color: rgba(244, 248, 12, 0.9);}
+  100%{color: var(--main-color);}
+}
+
+.PAMSSection .PAMSContainer .PAMSContent P{
+  font-size: 1.3rem;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 2rem;
+}
+.PAMSSection .PAMSContainer .PAMSContent .PAMSLink{
+  padding: 2.5rem;
+}
+
+
+
+/*----------------------------- Service Page Style Css Ends-----------------------------*/
+
+/*----------------------------- CONTACT SECTION STYLE STARTS-----------------------------*/
+.CHSection{
+  background: var(--bg-color);
+  padding: 0;
+}
+.CHSection .CHSContainer{
+background: url(images/disphoto.jpg);
+min-height: 26rem;
+background-position: center !important;
+background-size: cover !important;
+justify-content: center;
+text-align: center;
+align-items: center;
+display: block;
+padding-top: 4rem;
+}
+.CHSection .CHSContainer .CHSHeading{
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  text-align: center;
+}
+.CHSection .CHSContainer .CHSContent{
+  display: block;
+  justify-content: center;
+text-align: center;
+align-items: center;
+}
+.CHSection .CHSContainer .CHSContent .CHSLinks .CHSMedia{
+  font-size: 1.5;
+  color: var(--main-color);
+  font-family: 'Times New Roman', Times, serif;
+}
+.CHSection .CHSContainer .CHSContent .CHSLinks {
+ 
+  color:var(--light-white);
+  font-size: 1.5rem;
+   display: block;
+ 
+}
+.CHSection .CHSContainer .CHSContent .CHSCondacts .CHeading{
+  font-size: 1.7rem;
+  color: var(--main-color);
+  font-family: 'Times New Roman', Times, serif;
+}
+.CHSection .CHSContainer .CHSContent .CHSCondacts{
+display: block;
+}
+.CHSection .CHSContainer .CHSContent .CHSCondacts h2{
+font-size: 1.3rem;
+line-height: 2rem;
+font-family: 'Times New Roman', Times, serif;
+}
+/*------CONTACT FORM SECTION STYLE STARTS---------*/
+.CFSection{
+  background-color: var(--bg-color);
+}
+.CFSection .CFSHeading{
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 3rem;
+}
+.CFSection .CSForm{
+  display: block;
+   
+}
+.CFSection .CSForm .CFSContainer{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3.5rem;
+  background: var(--second-bg-color);
+  border: 3px solid var(--bg-color);
+  padding: 2rem;
+}
+.CFSection .CSForm .CFSContainer .IBox{
+  display: block;
+}
+.CFSection .CSForm .CFSContainer .IBox h2{
+  padding-right: 10rem;
+}
+.CFSection .CSForm .CFSContainer .IBox .gold{
+  font-size: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+.CFSection .CSForm .CFSContainer .IBox input{
+  height: 1.8rem;
+  width: 20rem;
+}
+.CFSection .CSForm .CFButton{
+  text-align: center;
+  padding: 2rem;
+}
+/* CONTACT FORM RESPONSIVE*/
+@media (max-width: 950px){
+  .CFSection .CSForm .CFSContainer{
+    display: grid;
+    grid-template-columns: auto auto;
+    
+  }
+}
+@media (max-width: 600px){
+  .CFSection .CSForm .CFSContainer{
+    display: grid;
+    grid-template-columns: auto;
+    
+  }
+  .CFSection .CSForm .CFSContainer .IBox input{
+    height: 1.8rem;
+    width: 100%rem;
+  }
+}
+@media (max-width: 450px){
+  .CFSection .CSForm .CFSContainer{
+    flex-direction: column;
+
+  }
+  .CFSection .CSForm .CFSContainer .IBox input{
+    height: 2rem;
+    width: 100%rem;
+  }
+  .CFSection .CSForm .CFSContainer .IBox h2{
+  color: var(--main-color);
+    font-size: 1.5rem;
+  }
+
+}
+
+
+
+
+
+
+
+/*----------------------------- CONTACT SECTION STYLE Ends-----------------------------*/
+
+/*------------------------ footer Style Css----------------------------*/
+.footer{
+ 
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed;
+  background: var(--bg-color);
+  min-height: 20rem;
+  
+}
+.footer .heading{
+  
+  font-size: 2.5rem;
+  font-weight: 600;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding:2rem ;
+  color: var(--white);
+  text-transform: uppercase;
+  
+}
+.footer .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  border-bottom:3px solid var(--light-white) ;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.footer .box-container .box h3{
+  color: var(--white);
+  font-size:1.5rem;
+  padding-bottom: 1.4rem;
+  color: var(--gold-color);
+  font-family: 'Times New Roman', Times, serif;
+}
+.footer .box-container .box a{
+  color:var(--light-white);
+  font-size: 1.2rem;
+  padding-bottom: 0.6rem;
+  display: block;
+  
+}
+.footer .box-container .box a i {
+  color: rgb(115, 255, 0);
+  padding-right: 0.8rem;
+  transition: .1s ease;
+}
+.footer .box-container .box a:hover i{
+  padding-right: 2rem;
+}
+.credit{
+  text-align: center;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--white);
+  font-weight: 600;
+
+}
+.footer .credit span{
+  color: var(--main-color);
+  }
+  marquee{
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+  }
+  .josh{
+    animation: josh 4s 10000 .5s;
+  }
+    @keyframes josh {
+      0%{color: magenta;}
+      50%{color: red;}
+      100%{color: gold}
+      
+    }
+  
+  .kahush{
+    animation: kahush 4s 10000 .5s ease;
+  }
+    @keyframes kahush {
+      0%{ color:gold}
+      50%{ color:magenta;}
+      100%{ color:red;}
+      
+    }
+  
+  /* TTES ADMIN LOGIN FORM STYLE STARTS*/
+  .formBody{
+    background: url(images/disphoto.jpg);
+    min-height: 60rem;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  .FSection{
+    padding: 0;
+    
+  }
+.FSection .Form{
+  display: block;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-top: 9rem;
+}
+.FSection .Form .FContainer{
+  display: block;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  
+  
+}
+.FSection .Form .FContainer .FIBox{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1.5rem;
+  
+}
+.FSection .Form .FContainer .FIBox .gold{
+  font-size: 2.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.FSection .Form .FContainer .FIBox input{
+  min-height: 2.5rem;
+  min-width: 25rem;
+  border: 3px solid #0ef;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+}
+.FSection .Form .FButton{
+  padding: 1rem;
+  padding-right: 7rem;
+}
+/*--------ADMIN LOGIN FORM RESPONSIVE--------------*/
+@media (max-width: 768px){
+  .FSection .Form .FContainer .FIBox{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+    
+  }
+
+}
+@media (max-width: 450px){
+.FSection .Form .FContainer .FIBox input{
+  min-height: 3.5rem;
+  min-width: 100%;
+  border: 3px solid #0ef;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+}
+.FSection .Form .FContainer .FIBox .gold{
+  font-size: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  float: left;
+}
+}
+
+/*--------ORDER PAGE TABLE STYLE STARTS--------*/
+.orderBody{
+  background: var(--bg-color);
+  min-height: 100rem;
+  background-size: cover !important;
+  background-position: center !important;
+  width: 100%;
+}
+.orderBody .OTSection  .OTSHeading{
+  text-align: center;
+  padding: 1.5rem;
+}
+.orderBody .OTSection  .OTSHeading h3{
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.OTSection .OTSContent{
+   text-align: left;
+  align-items: left;
+  width: 100%;
+  overflow-x: scroll;
+}
+.OTSection .OTSContent table{
+  border: 1px solid var(--main-color);
+  border-collapse: collapse;
+  width: 100%;
+  
+  
+}
+.OTSection .OTSContent table tr:nth-of-type(2n){
+background: var(--second-bg-color);
+}
+.OTSection .OTSContent table tr th{
+  border: 1px solid var(--main-color);
+  border-collapse: collapse;
+  color:cyan;
+  background: brown;
+  text-align: center;
+}
+.OTSection .OTSContent table tr td{
+  border: 1px solid var(--main-color);
+  border-collapse: collapse;
+  color: gold;
+}
+.orderBody .OTSection .TButton{
+  text-align: center;
+  padding:1.5rem;
+  color: #0ef;
+}
+@media (max-width: 980px){
+  th{
+  display: none;
+  border: none;
+}
+td{
+  display: block;
+  padding: 0.75rem 1rem;
+ 
+}
+td data-cell{
+  color: cyan;
+}
+td:first-child{
+  padding-top: 3rem;
+}
+td:last-child{
+  padding-bottom: 3rem;
+}
+td::before{
+  content: attr(data-cell) ": ";
+  font-weight: 700;
+  text-transform: uppercase;
+  color: cyan;
+}
+}
+@media (max-width: 600px){
+    th{
+    display: none;
+    border: none;
+  }
+  td{
+    display: block;
+    padding: 0.75rem 1rem;
+   
+  }
+  td data-cell{
+    color: cyan;
+  }
+  td:first-child{
+    padding-top: 3rem;
+  }
+  td:last-child{
+    padding-bottom: 3rem;
+  }
+  td::before{
+    content: attr(data-cell) ": ";
+    font-weight: 700;
+    text-transform: uppercase;
+    color: cyan;
+  }
+}
+/*---ORDER PAGE TABLE STYLE ENDS-----*/
+
+/*------------Breakpoints---------------*/
+
+@media only screen and (max-width: 768px) {
+.homeAbout .aboutContainer{
+ flex-direction: column;
+}
+.homeAbout .aboutContainer .aboutContent{
+  display: block;
+  gap: 2rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+}
+@media only screen and (max-width: 768px) {
+  .homeAbout .aboutContainer .aboutImage{
+    height:34rem ;
+    width: 100%;
+    overflow: hidden;
+  }
+  .homeAbout .aboutContainer .aboutImage img{
+    height: 100%;
+    width: 100%;
+  }
+  /*-------PRODUCTS MIDEA QUERY STARTS---------*/
+  }
+  @media only screen and (max-width: 768px) {
+    .productsData .PDContainer{
+      flex-direction: column;
+      grid-template-columns: auto ;
+            justify-content: center;
+      text-align: center;
+      align-items: center;
+      width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .WAIDivision .WAIContainer{
+    flex-direction: column;
+    grid-template-columns: auto auto;
+    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+
+}
+@media only screen and (max-width: 768px) {
+  .PGDivision .PGContainer{
+    
+    display: grid;
+    grid-template-columns: auto auto ;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+   
+  }
+  .PGDivision .PGContainer .PGBox{
+    border: 3px solid var(--main-color);
+    display: block;
+    height: 22rem;
+    width: 100%;
+
+  }
+  .IDivision .IContainer{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 4rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .IDivision .DBox{
+    display: block;
+    padding: 0;
+  
+    }
+    .IDivision .DBox .DImage{
+      height: 23rem;
+      width: 100%;
+      
+     
+    }
+    .PAMDivision .PAMContainer{
+      display: grid;
+      grid-template-columns: auto ;
+      gap: 4rem;
+      
+      padding: 3rem;
+    }
+    .PAMDivision .PAMContainer .PAMBox{
+      height: 23rem;
+      width: 20rem;
+      border: 3px solid var(--main-color);
+    }
+    .PAMDivision .PAMContainer .PAMBox .PAMImage{
+      height: 17rem;
+      width: 19.7rem;
+    }
+    .PAMDivision .PAMContainer .PAMBox .PAMImage img{
+      width: 100%;
+      height: 100%;
+    }
+  
+
+}
+
+@media only screen and (max-width: 600px) {
+  .WAIDivision .WAIContainer{
+    flex-direction: column;
+    grid-template-columns: auto ;
+    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .PGDivision .PGContainer{
+    
+    display: grid;
+    grid-template-columns: auto ;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+   
+  }
+  .PGDivision .PGContainer .PGBox{
+    border: 3px solid var(--main-color);
+    display: block;
+    height: 22rem;
+    width: 100%;
+
+  }
+  .IDivision .IContainer{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 4rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .IDivision .DBox{
+    display: block;
+    padding: 0;
+  
+    }
+    .IDivision .DBox .DImage{
+      height: 23rem;
+      width: 100%;
+      
+     
+    }
+    .IDivision .DBox .DHeading{
+      padding: 1.2rem;
+      font-size: 1.8rem;
+      font-weight: 400;
+     text-align: center;
+     
+    }
+
+}
+/*-------PRODUCTS MIDEA QUERY ENDS---------*/
+
+/*-------SERVICE/MIDEA QUERY STARTS---------*/
+
+
+
+@media only screen and (max-width: 768px){
+  .CSSection .CSContainer{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+ .CSSection .CSContainer .imageBox {
+  border: 3px solid var(--main-color);
+  height: 20rem;
+  width: 19rem;
+ }
+ .CSSection .CSContainer .imageBox .BImage{
+  width: 18.6rem;
+  height: 16rem;
+ }
+ .CSSection .CSContainer .imageBox .BImage img{
+  width: 100%;
+  height: 100%;
+ }
+  .ISSection .ISContainer .ISImage{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+  }
+  .PAMSSection .PAMSContainer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  .PAMSSection .PAMSContainer .PAMSImage{
+    border: 3px solid var(--main-color);
+    height: 22rem;
+    width: 100%;
+    border-radius: 4rem;
+  }
+  .PAMSSection .PAMSContainer .PAMSImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4rem;
+  }
+}
+/*------------------------------------------------------*/
+@media only screen and(max-width: 600px){
+
+   .CSSection .CSContainer .CSImage{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 4rem;
+   justify-self: start;
+   align-items: start;
+   text-align: left; 
+    margin-right: 50rem;
+   
+  }
+  .CSSection .CSContainer .CSImage .imageBox{
+    border: 3px solid var(--main-color);
+    height: 18rem;
+    width: 20rem;
+  
+  }
+  .ISSection .ISContainer .ISImage{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+  }
+}
+/*------CONTACT MEDIA QUERY STARTS ---------*/
+
